@@ -1,15 +1,20 @@
 const OWNER = "Wjer-C";
 const REPO = "Wjer-C.github.io";
 const PATH = 'songs';
+const songLister = document.getElementById("songPrint");
+const song = document.getElementById("song");
+const shuffleButton = document.getElementById("shuffle");
+const songList = []
 
 
 async function getGitHubFiles() {
-    const url = 'https://github.com{OWNER}/${REPO}/contents/${PATH}';
-
+    
+    const url = 'https://github.com/Wjer-C/Wjer-C.github.io/tree/main/songs';
+    
     try {
         const response = await fetch(url);
         if (!response.ok) throw new Error('HTTP error, status: ${response.status}');
-
+        
         const data = await response.json();
         const listElement = document.getElementById('file-list')
 
@@ -23,6 +28,8 @@ async function getGitHubFiles() {
             }
 
             listElement.appendChild(li); 
+            songList = listElement
+            
         });
 
     } catch (error) {
@@ -34,9 +41,7 @@ async function getGitHubFiles() {
 getGitHubFiles();
 
 
-const song = document.getElementById("song");
-const shuffleButton = document.getElementById("shuffle");
-const songList = []
+
 
 
 
