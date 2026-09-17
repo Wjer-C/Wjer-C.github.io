@@ -120,6 +120,7 @@ const songList = [
 "Ironies feat. Kasane Teto.mp3",
 "Miku-sama： LOVE IS WARRR ft. Teto-sama.mp3",
 "Neon feat. Kasane Teto.mp3",
+"NONEP -『ピクセルダウン』(feat. 重音テト).mp3",
 "NOT A CAT feat. Catsane Teto.mp3",
 "Translator feat. Kasane Teto.mp3",
 "Villainess in Lipstick ⧸ Hatsune Miku.mp3",
@@ -133,8 +134,6 @@ const songPlayer = document.getElementById('song');
 const audio = document.getElementById('audio');
 currentSong = songList[1]
 audio.loop = false;
-
-
 
 function shuffle(currentSong) {
     songPlayer.src = 'songs/' + currentSong;
