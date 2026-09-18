@@ -27,7 +27,7 @@ const songList = [
 "026 - POTETO CHIP ft. Kasane Teto.mp3",
 "027 - NEURODIVERGENCE ft. GUMI.mp3",
 "028 - わがままで何が悪い！ ⧸ 重音テト・初音ミク - My Way, So What!.mp3",
-"029 - 一千光年 ⧸ いよわ feat. 初音ミク、v_flower、歌愛ユキ、GUMI、可不、星界、足立レイ、裏命、花隈千冬、VY1、SOLARIA（KLY ⧸Iyowa with AllSingers）.mp3",
+"029 - 一千光年 ⧸ いよわ feat. 初音ミク、v_flower、歌愛ユキ、GUMI、可不、星界、足立レイ、裏命、花隈千冬、VY1、SOLARIA（KLY ⧸ Iyowa with AllSingers）.mp3",
 "030 - きゅうくらりん ⧸ いよわ feat.可不（Kyu-kurarin ⧸ Iyowa feat.Kafu）.mp3",
 "031 - ダダダダダル ⧸ 雨良 feat.初音ミクVS重音テト(Dadadadadaru ⧸ Amala ft.Miku VS Teto).mp3",
 "032 - 【GUMI】エンヴィーベイビー【Kanaria】.mp3",
@@ -110,39 +110,44 @@ const songList = [
 "109 - ワンダー ⧸ r-906 feat. 初音ミク.mp3",
 "110 - GAMBLER'S FALLACY (ft. Kasane Teto).mp3",
 "111 - バゥムクゥヘン・エンドロゥル ⧸ 雨良 feat.初音ミクVS重音テトVS亞北ネル(Baumkuchen End Credits ⧸ Amala ft.Miku vs Teto vs Neru).mp3",
-"Blue Shift feat. Kasane Teto.mp3",
-"Borderline Girl feat. Kasane Teto.mp3",
-"CONTRADICTIONS (feat. Kasane Teto) (Original Song).mp3",
-"Dance Delightful (feat. Adachi Rei).mp3",
-"Ego Renegade Boy ft. Kagamine Len.mp3",
-"Ego Renegade Girl Ft. Kagamine Rin (Fan MV).mp3",
-"Fever Dream ⧸ Kasane Teto SV2.mp3",
-"Ironies feat. Kasane Teto.mp3",
-"Miku-sama： LOVE IS WARRR ft. Teto-sama.mp3",
-"Neon feat. Kasane Teto.mp3",
-"NONEP -『ピクセルダウン』(feat. 重音テト).mp3",
-"NOT A CAT feat. Catsane Teto.mp3",
-"Translator feat. Kasane Teto.mp3",
-"Villainess in Lipstick ⧸ Hatsune Miku.mp3",
-"【MV】エイプリルスター⧸重音テト.mp3",
-"【Vocaloid Original】Copycat【GUMI English】.mp3",
-"パリィ ⧸ 宮守文学 feat.鏡音レン, 鏡音リン.mp3",
-"誤解ですっ！(Gokaidesu!) feat. Kasane Teto.mp3",
-"【MV】Seven Dollars (Feat. Kasane Teto).mp3",
+"112 -【MV】エイプリルスター⧸重音テト.mp3",
+"113 -【Vocaloid Original】Copycat【GUMI English】.mp3",
+"114 - Blue Shift feat. Kasane Teto.mp3",
+"115 - Borderline Girl feat. Kasane Teto.mp3",
+"116 - CONTRADICTIONS (feat. Kasane Teto) (Original Song).mp3",
+"117 - Dance Delightful (feat. Adachi Rei).mp3",
+"118 - Ego Renegade Boy ft. Kagamine Len.mp3",
+"119 - Fever Dream ⧸ Kasane Teto SV2.mp3",
+"120 - Ironies feat. Kasane Teto.mp3",
+"121 - Miku-sama： LOVE IS WARRR ft. Teto-sama.mp3",
+"122 - Neon feat. Kasane Teto.mp3",
+"123 - NOT A CAT feat. Catsane Teto.mp3",
+"124 - Translator feat. Kasane Teto.mp3",
+"125 - Villainess in Lipstick ⧸ Hatsune Miku.mp3",
+"126 - パリィ ⧸ 宮守文学 feat.鏡音レン, 鏡音リン.mp3",
+"127 - Hatsune Miku - Vegetable Juice (Po Pi Po) with English lyrics.mp3",
+"128 - 【MV】Seven Dollars (Feat. Kasane Teto).mp3",
 ];
 songsList = songList
 const SL = document.getElementById('songPrint');
 const shuffleButton = document.getElementById('shuffle');
 const songPlayer = document.getElementById('song');
 const audio = document.getElementById('audio');
+const collapsibleList = document.getElementById('all');
+
+
 currentSong = songList[1]
 audio.loop = false;
+
+
 
 function shuffle(currentSong) {
     songPlayer.src = 'songs/' + currentSong;
     audio.load();
     audio.play();
+
     songsList = songsList.filter(item => item !== currentSong);
+
 }
 
 function getRandomItem(arr) {
@@ -151,9 +156,12 @@ function getRandomItem(arr) {
     }
 
     return arr[Math.floor(Math.random() * arr.length)];
-    
-
 };
+
+function setSong(song) {
+    currentSong = song
+    shuffle(currentSong)
+}
 
 audio.addEventListener('ended', () => {
     currentSong = getRandomItem(songsList);
@@ -164,11 +172,21 @@ audio.addEventListener('ended', () => {
 shuffleButton.addEventListener("click", function() {
     currentSong = getRandomItem(songsList);
     SL.textContent = currentSong;
+    SL.onclick = () => setSong(currentSong);
+
     shuffle(currentSong);
 });
 
+
+
 currentSong = getRandomItem(songsList);
 SL.textContent = currentSong;
+
+collapsibleList.innerHTML = songList
+    .map(songList => `<li onclick='setSong("${songList}")'>${songList}</li><div class="divide"></div>`)
+    .join('');
+
+
 shuffle(currentSong);
 
 
