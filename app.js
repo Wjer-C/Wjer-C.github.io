@@ -128,7 +128,9 @@ const songList = [
 "【Vocaloid Original】Copycat【GUMI English】.mp3",
 "パリィ ⧸ 宮守文学 feat.鏡音レン, 鏡音リン.mp3",
 "誤解ですっ！(Gokaidesu!) feat. Kasane Teto.mp3",
+"【MV】Seven Dollars (Feat. Kasane Teto).mp3",
 ];
+songsList = songList
 const SL = document.getElementById('songPrint');
 const shuffleButton = document.getElementById('shuffle');
 const songPlayer = document.getElementById('song');
@@ -140,27 +142,32 @@ function shuffle(currentSong) {
     songPlayer.src = 'songs/' + currentSong;
     audio.load();
     audio.play();
-
+    songsList = songsList.filter(item => item !== currentSong);
 }
 
 function getRandomItem(arr) {
+    if (arr.length <= 0) {
+        songsList = songList
+    }
+
     return arr[Math.floor(Math.random() * arr.length)];
+    
 
 };
 
 audio.addEventListener('ended', () => {
-    currentSong = getRandomItem(songList);
+    currentSong = getRandomItem(songsList);
     SL.textContent = currentSong;
     shuffle(currentSong);
 });
 
 shuffleButton.addEventListener("click", function() {
-    currentSong = getRandomItem(songList);
+    currentSong = getRandomItem(songsList);
     SL.textContent = currentSong;
     shuffle(currentSong);
 });
 
-currentSong = getRandomItem(songList);
+currentSong = getRandomItem(songsList);
 SL.textContent = currentSong;
 shuffle(currentSong);
 
