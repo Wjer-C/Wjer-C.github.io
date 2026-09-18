@@ -27,7 +27,7 @@ const songList = [
 "026 - POTETO CHIP ft. Kasane Teto.mp3",
 "027 - NEURODIVERGENCE ft. GUMI.mp3",
 "028 - わがままで何が悪い！ ⧸ 重音テト・初音ミク - My Way, So What!.mp3",
-"029 - 一千光年 ⧸ いよわ feat. 初音ミク、v_flower、歌愛ユキ、GUMI、可不、星界、足立レイ、裏命、花隈千冬、VY1、SOLARIA（KLY ⧸ Iyowa with AllSingers）.mp3",
+"029 - 一千光年 ⧸ いよわ feat. 初音ミク、v_flower、歌愛ユキ、GUMI、可不、星界、足立レイ、裏命、花隈千冬、VY1、SOLARIA（KLY ⧸Iyowa with AllSingers）.mp3",
 "030 - きゅうくらりん ⧸ いよわ feat.可不（Kyu-kurarin ⧸ Iyowa feat.Kafu）.mp3",
 "031 - ダダダダダル ⧸ 雨良 feat.初音ミクVS重音テト(Dadadadadaru ⧸ Amala ft.Miku VS Teto).mp3",
 "032 - 【GUMI】エンヴィーベイビー【Kanaria】.mp3",
@@ -127,6 +127,7 @@ const songList = [
 "【MV】エイプリルスター⧸重音テト.mp3",
 "【Vocaloid Original】Copycat【GUMI English】.mp3",
 "パリィ ⧸ 宮守文学 feat.鏡音レン, 鏡音リン.mp3",
+"誤解ですっ！(Gokaidesu!) feat. Kasane Teto.mp3",
 ];
 const SL = document.getElementById('songPrint');
 const shuffleButton = document.getElementById('shuffle');
