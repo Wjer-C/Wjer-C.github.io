@@ -42,7 +42,7 @@ const songList = [
 "041 - キャラクターT ⧸ 重音テト, 重音テトSV.mp3",
 "042 - Chenomio - フレフラ feat.重音テト.mp3",
 "043 - Chenomio - お願いドクター！ feat.重音テト.mp3",
-"044 - 重音テト　オリジナル曲「月花のファントムシーフ」【手書きMV】Moonlight Phantom Thief⧸Kasane Teto #vocaloid #electronicmusic.mp3",
+"044 - 重音テト　オリジナル曲「月花のファントムシーフ」【手書きMV】Moonlight Phantom Thief⧸Kasane Teto.mp3",
 "045 - 【初音ミク・重音テトSV】あっはっは笑【巡巡】.mp3",
 "046 - ぴーなた-急性恋愛中毒　feat.重音テト.mp3",
 "047 - 第n次元 ⧸ 重音テトSV - Dimension No.n.mp3",
