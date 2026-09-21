@@ -82,7 +82,7 @@ const songList = [
 "081 - 稲葉曇『ラグトレイン』Vo. 歌愛ユキ.mp3",
 "082 - KAT x Aku P - Affection Addiction ft. POPY (SynthV Original Song).mp3",
 "083 - 32. Cutie Mew Mew Magic (DELTARUNE Chapter 5 Soundtrack) - Toby Fox & @Cametek.CamelliaOfficial.mp3",
-"084 - 4nim0sity [99.999999999%].mp3",
+"084 - 4nim0sity.mp3",
 "085 - DANCIN VIBES ft. Kasane Teto.mp3",
 "086 - DECO＊27 - サッドガール・セックス feat. 初音ミク.mp3",
 "087 - Giga - ガッチュー！ ft.Miku・Rin・Len【MV】.mp3",
