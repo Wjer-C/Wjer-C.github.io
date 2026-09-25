@@ -128,6 +128,7 @@ const songList = [
 "127 - Hatsune Miku - Vegetable Juice (Po Pi Po) with English lyrics.mp3",
 "128 - 【MV】Seven Dollars (Feat. Kasane Teto).mp3",
 "129 - ヘレディティ ⧸ 初音ミク・GUMI・IA・Flower・可不・重音テトSV - Heredity.mp3",
+"130 - Lostinsummer feat. Kasane Teto.mp3",
 ];
 songsList = songList
 const SL = document.getElementById('songPrint');
