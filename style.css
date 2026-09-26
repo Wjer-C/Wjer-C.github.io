@@ -27,6 +27,23 @@ audio {
     margin: 10px;
 }
 
+.OButton {
+    background-color: #063cb9;
+    color: black;
+    width: 50%;
+    font-weight: bold;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none; /* Removes the underline */
+    display: inline-block;
+    font-size: 16px;
+    border: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    position: fixed;
+    bottom: 30px;
+}
+
 button {
     margin: 20px;
     font-size: large;
@@ -42,7 +59,7 @@ button {
 }
 
 
-div {
+.div {
     display: flex;
     justify-content: center;
 }
