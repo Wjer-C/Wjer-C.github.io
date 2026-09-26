@@ -129,6 +129,7 @@ const songList = [
 "128 - 【MV】Seven Dollars (Feat. Kasane Teto).mp3",
 "129 - ヘレディティ ⧸ 初音ミク・GUMI・IA・Flower・可不・重音テトSV - Heredity.mp3",
 "130 - Lostinsummer feat. Kasane Teto.mp3",
+"131 - Just a Hint of You (feat. GUMI).mp3",
 ];
 songsList = songList
 const SL = document.getElementById('songPrint');
